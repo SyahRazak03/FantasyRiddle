@@ -836,6 +836,145 @@ button {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   CLUE PANEL TABS
+   ═══════════════════════════════════════════════════════════ */
+.clue-tabs {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--stone-mid);
+  padding: 0 0.75rem;
+  flex-shrink: 0;
+  gap: 0.1rem;
+}
+
+.clue-tab {
+  font-family: var(--font-title);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  white-space: nowrap;
+}
+
+.clue-tab:hover {
+  color: var(--parchment);
+}
+
+.clue-tab.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+.legend-toggle {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 0.58rem;
+  opacity: 0.7;
+}
+
+.legend-toggle:hover {
+  color: var(--parchment);
+  opacity: 1;
+}
+
+/* ─── Shared logic intro ──────────────────────────────────── */
+.logic-intro {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--stone-mid);
+  margin-bottom: 0.15rem;
+  line-height: 1.5;
+}
+
+/* ─── Legend ──────────────────────────────────────────────── */
+.logic-legend {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--stone-light);
+  padding: 0.5rem 0.65rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.legend-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.legend-symbol {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: var(--gold-lt);
+  min-width: 6rem;
+  flex-shrink: 0;
+}
+
+.legend-meaning {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ─── Clue items in logic tabs ────────────────────────────── */
+.logic-clue-item {
+  align-items: flex-start;
+}
+
+.logic-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.logic-source {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* ─── FOL formula block ───────────────────────────────────── */
+.fol-formula {
+  display: block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: var(--gold-lt);
+  background: rgba(122, 92, 8, 0.14);
+  border-left: 2px solid var(--gold-dk);
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Prolog code block ───────────────────────────────────── */
+.prolog-code {
+  display: block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  color: #7ecf9a;
+  background: rgba(8, 28, 16, 0.55);
+  border-left: 2px solid var(--emerald);
+  padding: 0.3rem 0.55rem;
+  white-space: pre;
+  overflow-x: auto;
+  line-height: 1.55;
+}
+
+/* ═══════════════════════════════════════════════════════════
    HOW TO PLAY
    ═══════════════════════════════════════════════════════════ */
 .howto {
