@@ -4,6 +4,7 @@ import { PUZZLES, ADVENTURERS, CATEGORIES } from '../engine/puzzles'
 import { solve } from '../engine/cspSolver'
 import Grid      from './Grid'
 import CluePanel from './CluePanel'
+import AIPanel   from './AIPanel'
 
 const STEP_DELAY = 60 // ms between solver animation steps
 
@@ -204,6 +205,9 @@ export default function GameBoard() {
               Reset
             </button>
           </div>
+
+          {/* AI concept panel */}
+          <AIPanel isSolving={isSolving} gameWon={gameWon} />
 
           {/* Status messages */}
           {message && <p className="game-message">{message}</p>}
